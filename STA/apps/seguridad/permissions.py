@@ -27,7 +27,7 @@ class CustomPermission(BasePermission):
 
         # Para operaciones de lista (GET) y creación (POST)
         if request.method == 'GET':
-            return request.user.has_perm(f'{model._meta.app_label}.view_{model._meta.model_name}')
+             return request.user.has_perm(f'{model._meta.app_label}.view_{model._meta.model_name}')
         if request.method == 'POST':
             return request.user.has_perm(f'{model._meta.app_label}.add_{model._meta.model_name}')
         return True

@@ -16,7 +16,6 @@ logger = logging.getLogger(__name__)
 
 
 
-
 class RutaCriticaApiView(PaginationMixin, APIView):
     """
     Vista para listar todas las rutas o agregar una nueva.
@@ -119,7 +118,7 @@ class RutaCriticaDetails(APIView):
         logger.info("DELETE request to delete ruta with ID: %s", pk)
         ruta = get_object_or_404(RutaCritica, id=pk)
         if not ruta:
-            return Response({'error': 'Ruta no encontrado'}, status=status.HTTP_404_NOT_FOUND)
+            return Response({'error': 'Ruta no encontrada'}, status=status.HTTP_404_NOT_FOUND)
 
         self.check_object_permissions(request, ruta)  # Verificación de permisos
         ruta.delete()
