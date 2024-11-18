@@ -19,7 +19,9 @@ class AnimalApiView(PaginationMixin, APIView):
     Vista para listar todos los animales, agregar uno nuevo, actualizar o eliminar.
     """
     permission_classes = [IsAuthenticated, CustomPermission]
-    model = RutaCritica
+    model = Animal
+
+
 
 
     @swagger_auto_schema(responses={200: AnimalSerializer(many=True)})

@@ -20,7 +20,7 @@ class CamaraApiView(PaginationMixin, APIView):
     Vista para listar todas las camaras, agregar una nueva, actualizar o eliminar una por ID.
     """
     permission_classes = [IsAuthenticated, CustomPermission]
-    model = Animal
+    model = Camara
 
     @swagger_auto_schema(responses={200: CamaraSerializer(many=True)})
     def get(self, request):
