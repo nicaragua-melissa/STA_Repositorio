@@ -6,6 +6,7 @@ Grupo: # 04
 Integrantes:
                    Jennifer Melissa Nicaragua Tobías
                    María Guadalupe Ortiz Lezama
+                   María Elissa Peralta Pavón
                    Bryan Steven Urbina Torrente
 Nombre de la Aplicación: STA
 Versión: 2.0.0
